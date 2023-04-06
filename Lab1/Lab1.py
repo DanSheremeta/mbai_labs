@@ -46,7 +46,7 @@ class Chessboard:
 
 
 class SimulatedAnnealing:
-    def __init__(self, temperature=1.0, cooling_rate=0.999):
+    def __init__(self, temperature=10.0, cooling_rate=0.9999):
         self.temperature = temperature
         self.cooling_rate = cooling_rate
 
@@ -68,7 +68,7 @@ class SimulatedAnnealing:
         return chessboard.board
 
 
-n = 12 # size of chessboard (n x n)
+n = 20 # size of chessboard (n x n)
 
 chessboard = Chessboard(n) # generate initial configuration
 
@@ -80,3 +80,4 @@ board = annealer.anneal(chessboard) # find solution using simulated annealing
 
 print("Final configuration:")
 Chessboard(n, board).print_board()
+print(chessboard.attacks())
