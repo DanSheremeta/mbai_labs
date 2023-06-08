@@ -5,7 +5,6 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from IPython.display import clear_output
 
-
 N = 1000
 
 X, y = make_blobs(n_samples=N, centers=None, n_features=2, random_state=0, center_box=(1, 40), cluster_std=1.5)
@@ -20,7 +19,6 @@ class K_Klustering:
     def __init__(self, data, k):
         self.data = data
         self.k = k
-
 
 
 class Main:
@@ -73,7 +71,7 @@ plt.ion()
 # scaled_data=scale_data(data=data)
 scaled_data = data
 max_iterations = 1000
-k = 4
+k = 5
 
 centroids = random_centroids(data=scaled_data, k=k)
 old_centroids = pd.DataFrame()
@@ -89,4 +87,4 @@ while iteration < max_iterations and not centroids.equals(old_centroids):
     plot_clusters(data=scaled_data, labels=labels, iteration=iteration, centroids=centroids)
     iteration += 1
 
-#plt.waitforbuttonpress()
+# plt.waitforbuttonpress()

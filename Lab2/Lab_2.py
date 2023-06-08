@@ -73,7 +73,6 @@ def plot_points(under_curve, above_curve):
 
 
 # case #1 (test: trigonometrical positively defined function a = 0, b = 1)
-# case #1 (test: trigonometrical positively defined function a = 0, b = 1)
 print('Case 1')
 print('f = 10 + 5*sin(5*x)  a=0 b=1')
 f1 = lambda x: (10 + 5 * np.sin(5 * x)) ** 2
